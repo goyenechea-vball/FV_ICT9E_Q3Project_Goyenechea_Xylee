@@ -1,99 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .container-fluid {
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            height: 100px;
+            width: 130px;
+        }
+        body {
+            background-image: url('https://i.pinimg.com/736x/7b/2e/88/7b2e88ba21c5b1cbb54b57ad24dccb10.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            color: #9c1b08;
+            font-family: cursive;
+        }
+        p {
+            text-align: center;
+            color: #140301;
+            font-family: cursive;
+        }
+        .nav-link {
+            font-weight: bold;
+           
+        }
+        .nav-link:hover {
+            color: #ff6f61; /* Change this color to whatever you like for hover effect */
+        }
+         .map {
+            width: 30%; 
+            height: auto; 
+        }
+         .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .form-select {
+            width: 80%; 
+            max-width: 500px;
+            margin-bottom: 20px; 
+        }
+        .form-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        details{
+            background-color: #f2e5c2;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            font-family: cursive;
+        }
+
+    </style>
 </head>
 <body>
- <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-     <!-- Brand/Logo -->
-     <div class="container-fluid">
-     <style> 
-     	
-        body{
-            background-image:url('https://i.pinimg.com/736x/44/f1/ef/44f1ef20e3a99f6a3413ea4a802e63cf.jpg');
-            background-color: #00020a;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
+    <nav class="navbar navbar-expand-md bg-white navbar-light">
+        <div class="container-fluid">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="project.html"><img src="https://tse3.mm.bing.net/th?id=OIP.2frEawGdLiSPaQhHGlTMaAHaHa&pid=Api&P=0&h=180" alt="Logo"></a>
+            <!-- Add links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">Train Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page3.html">Help</a>
+                    </li>
+                </ul>
+                <!-- Add text --> 
+                <!-- Add a search bar -->
+                <form class="d-flex ms-auto">
+                    <input class="form-control" type="text" placeholder="search...">
+                    <button class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-   }
-     
-     .container2{
-     	font-family: consolas;
-     	color: whitesmoke;
-     }
-     .navbar {
-            background-color: white;
-        }
-
-        .navbar-light .navbar-nav .nav-link {
-            color: #fefefe;
-        }
-
-        .navbar-brand img {
-            width: 170px; 
-            height: auto;
-        }
-
-        .content {
-            margin-top: 10px; 
-        }
-
-
-        .navbar .d-flex {
-            margin-left: auto; 
-        }
-        .scrollable-content {
-            max-height: 200px; 
-            overflow-y: scroll;
-        }
-
-
-      </style>
-   </head>
-  <body>
-
-
-<a class="navbar-brand" href="index.html"><img src="https://tse3.mm.bing.net/th?id=OIP.2frEawGdLiSPaQhHGlTMaAHaHa&pid=Api&P=0&h=180"></a>
-
-
-     <!-- Add links -->
-     <div class="collapse navbar-collapse">
-         <ul class="navbar-nav me-auto">
-             <li class="nav-item">
-                 <a class="nav-link" href="index.html">Home</a>
-             </li>
-              <a class="nav-link" href="page1.html">Train Schedule</a>
-               </li>
-                 <a class="nav-link" href="page2.html">Help</a>
-
-
-         </ul>
-         <!-- Add a search bar-->
-         <form class="d-flex">
-             <input class="form-control" type="text" placeholder="search...">
-                 <button class="btn btn-success" type="button">Search</button>
-             </form>
-         </div>
-     </div>
- </nav>
+    <div class="container-fluid form-container">
+        <br>
+        <h1>Fare Guide</h1>
+        <img class="map" src="https://appassets.mvtdev.com/map/41/l/1022/237346/2.jpg">
+        <br>
+         <h2 style="color:#faca50; font-family: cursive;">Buy Your Ticket</h2>
+         <details>
+            <summary>Buy Ticket</summary>
+                <p>Ticket Price</p>
+                    <i id="display">
+                        <!-- Select Preferences -->
+        <form class="form-group">
+            <div class="mb-3">
+                <label for="station" class="form-label">Depart from:</label>
+                <select class="form-select" id="station">
+                     <option value="santolan">Santolan</option>
+                     <option value="katipunan">Katipunan</option>
+                     <option value="anonas">Anonas</option>
+                     <option value="araneta_center_cubao">Araneta Center-Cubao</option>
+                     <option value="betty_go_belmonte">Betty Go-Belmonte</option>
+                     <option value="gilmore">Gilmore</option>
+                     <option value="j_ruiz">J. Ruiz</option>
+                     <option value="v_mapa">V. Mapa</option>
+                     <option value="pureza">Pureza</option>
+                     <option value="legarda">Legarda</option>
+                     <option value="recto">Recto
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="station" class="form-label"> Arrive to:</label>
+                <select class="form-select" id="station">
+                     <option value="santolan">Santolan</option>
+                     <option value="katipunan">Katipunan</option>
+                     <option value="anonas">Anonas</option>
+                     <option value="araneta_center_cubao">Araneta Center-Cubao</option>
+                     <option value="betty_go_belmonte">Betty Go-Belmonte</option>
+                     <option value="gilmore">Gilmore</option>
+                     <option value="j_ruiz">J. Ruiz</option>
+                     <option value="v_mapa">V. Mapa</option>
+                     <option value="pureza">Pureza</option>
+                     <option value="legarda">Legarda</option>
+                     <option value="recto">Recto
+                </select>
+                
+            </div>
+                <button type="submit" class="btn btn-success" onclick="showValue()">Buy Ticket</button>
+        </form>
+            </summary>
+        </details>
+    </div>
 </body>
 </html>
-
-
-
-
-<div class="container">
-        <div class="row">
-            <center>
-        <br>
-
-
-        <input type="submit" id="submit" name="submit" value="
-</div>
-</head>
-<body>
-
