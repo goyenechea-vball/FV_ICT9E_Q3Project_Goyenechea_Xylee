@@ -32,16 +32,15 @@
         }
         .nav-link {
             font-weight: bold;
-           
         }
         .nav-link:hover {
             color: #ff6f61; /* Change this color to whatever you like for hover effect */
         }
-         .map {
+        .map {
             width: 30%; 
             height: auto; 
         }
-         .form-container {
+        .form-container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -59,7 +58,7 @@
             align-items: center;
             gap: 20px;
         }
-        details{
+        details {
             background-color: #f2e5c2;
             padding: 10px;
             border-radius: 6px;
@@ -67,15 +66,12 @@
             width: 600px;
             font-family: cursive;
         }
-
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container-fluid">
-            <!-- Brand/Logo -->
             <a class="navbar-brand" href="project.html"><img src="https://tse3.mm.bing.net/th?id=OIP.2frEawGdLiSPaQhHGlTMaAHaHa&pid=Api&P=0&h=180" alt="Logo"></a>
-            <!-- Add links -->
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -88,8 +84,6 @@
                         <a class="nav-link" href="page3.html">Help</a>
                     </li>
                 </ul>
-                <!-- Add text --> 
-                <!-- Add a search bar -->
                 <form class="d-flex ms-auto">
                     <input class="form-control" type="text" placeholder="search...">
                     <button class="btn btn-success" type="button">Search</button>
@@ -103,50 +97,85 @@
         <h1>Fare Guide</h1>
         <img class="map" src="https://appassets.mvtdev.com/map/41/l/1022/237346/2.jpg">
         <br>
-         <h2 style="color:#faca50; font-family: cursive;">Buy Your Ticket</h2>
-         <details>
+        <h2 style="color:#faca50; font-family: cursive;">Buy Your Ticket</h2>
+        <details>
             <summary>Buy Ticket</summary>
-                <p>Ticket Price</p>
-                    <i id="display">
-                        <!-- Select Preferences -->
-        <form class="form-group">
-            <div class="mb-3">
-                <label for="station" class="form-label">Depart from:</label>
-                <select class="form-select" id="station">
-                     <option value="santolan">Santolan</option>
-                     <option value="katipunan">Katipunan</option>
-                     <option value="anonas">Anonas</option>
-                     <option value="araneta_center_cubao">Araneta Center-Cubao</option>
-                     <option value="betty_go_belmonte">Betty Go-Belmonte</option>
-                     <option value="gilmore">Gilmore</option>
-                     <option value="j_ruiz">J. Ruiz</option>
-                     <option value="v_mapa">V. Mapa</option>
-                     <option value="pureza">Pureza</option>
-                     <option value="legarda">Legarda</option>
-                     <option value="recto">Recto
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="station" class="form-label"> Arrive to:</label>
-                <select class="form-select" id="station">
-                     <option value="santolan">Santolan</option>
-                     <option value="katipunan">Katipunan</option>
-                     <option value="anonas">Anonas</option>
-                     <option value="araneta_center_cubao">Araneta Center-Cubao</option>
-                     <option value="betty_go_belmonte">Betty Go-Belmonte</option>
-                     <option value="gilmore">Gilmore</option>
-                     <option value="j_ruiz">J. Ruiz</option>
-                     <option value="v_mapa">V. Mapa</option>
-                     <option value="pureza">Pureza</option>
-                     <option value="legarda">Legarda</option>
-                     <option value="recto">Recto
-                </select>
-                
-            </div>
-                <button type="submit" class="btn btn-success" onclick="showValue()">Buy Ticket</button>
-        </form>
-            </summary>
+            <i id="display">
+                <form class="form-group" onsubmit="event.preventDefault(); showValue();">
+                    <div class="mb-3">
+                        <label for="origin" class="form-label">Depart from:</label>
+                        <select id="origin" class="form-select">
+                            <option value="recto">Recto</option>
+                            <option value="legarda">Legarda</option>
+                            <option value="pureza">Pureza</option>
+                            <option value="v_mapa">V. Mapa</option>
+                            <option value="j_ruiz">J. Ruiz</option>
+                            <option value="gilmore">Gilmore</option>
+                            <option value="betty_go">Betty Go</option>
+                            <option value="cubao">Cubao</option>
+                            <option value="anonas">Anonas</option>
+                            <option value="katipunan">Katipunan</option>
+                            <option value="santolan">Santolan</option>
+                            <option value="marikina">Marikina</option>
+                            <option value="antipolo">Antipolo</option>
+                        </select>
+                        <!-- General Admission -->
+                        <select class="form-select" id="display1"  >
+                            <option value="none">General Admission</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Arrive to:</label>
+                        <select id="destination" class="form-select">
+                            <option value="recto">Recto</option>
+                            <option value="legarda">Legarda</option>
+                            <option value="pureza">Pureza</option>
+                            <option value="v_mapa">V. Mapa</option>
+                            <option value="j_ruiz">J. Ruiz</option>
+                            <option value="gilmore">Gilmore</option>
+                            <option value="betty_go">Betty Go</option>
+                            <option value="cubao">Cubao</option>
+                            <option value="anonas">Anonas</option>
+                            <option value="katipunan">Katipunan</option>
+                            <option value="santolan">Santolan</option>
+                            <option value="marikina">Marikina</option>
+                            <option value="antipolo">Antipolo</option>
+                        </select>
+                        <!-- Child/Senior -->
+                        <select class="form-select" id="display2" >
+                            <option value="none">Student/Senior</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="showValue()">Buy Ticket</button>
+                </form>
+            </i>
         </details>
+
+        <script>
+        function showValue(){
+ function showValue(){
+        var GeneralAdmission = 20; // Price per general admission ticket
+        var studentSenior = 13; // Price per child/senior ticket
+
+        var generalCount = document.getElementById('display1').value;
+        var studentseniorCount = document.getElementById('display2').value;
+
+        var total = (GeneralAdmission * generalCount) + (studentSenior * studentseniorCount);
+
+        window.alert('Your Ticket Price is ₱' + total.toFixed(2));
+    </script>
     </div>
 </body>
 </html>
